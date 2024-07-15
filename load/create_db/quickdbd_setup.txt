@@ -2,12 +2,13 @@ categories
 -
 category_id PK VARCHAR(4)
 category VARCHAR(20)
+last_updated TIMESTAMP
 
 sub_categories
 -
 subcategory_id PK VARCHAR(7)
 subcategory VARCHAR(20)
-
+last_updated TIMESTAMP
 
 contacts
 -
@@ -15,6 +16,7 @@ contact_id PK INTEGER
 first_name VARCHAR(20)
 last_name VARCHAR(20)
 email VARCHAR(50)
+last_updated TIMESTAMP
 
 campaigns
 -
@@ -32,3 +34,4 @@ launced_date DATE
 end_date DATE
 category_id VARCHAR(4) FK >- categories.category_id
 subcategory_id VARCHAR(7) FK >- sub_categories.subcategory_id
+last_updated TIMESTAMP

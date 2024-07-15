@@ -6,6 +6,7 @@
 CREATE TABLE "categories" (
     "category_id" VARCHAR(4)   NOT NULL,
     "category" VARCHAR(20)   NOT NULL,
+    "last_updated" TIMESTAMP   NOT NULL default localtimestamp,
     CONSTRAINT "pk_categories" PRIMARY KEY (
         "category_id"
      )
@@ -14,6 +15,7 @@ CREATE TABLE "categories" (
 CREATE TABLE "sub_categories" (
     "subcategory_id" VARCHAR(7)   NOT NULL,
     "subcategory" VARCHAR(20)   NOT NULL,
+    "last_updated" TIMESTAMP   NOT NULL default localtimestamp,
     CONSTRAINT "pk_sub_categories" PRIMARY KEY (
         "subcategory_id"
      )
@@ -24,6 +26,7 @@ CREATE TABLE "contacts" (
     "first_name" VARCHAR(20)   NOT NULL,
     "last_name" VARCHAR(20)   NOT NULL,
     "email" VARCHAR(50)   NOT NULL,
+    "last_updated" TIMESTAMP   NOT NULL default localtimestamp,
     CONSTRAINT "pk_contacts" PRIMARY KEY (
         "contact_id"
      )
@@ -44,6 +47,7 @@ CREATE TABLE "campaigns" (
     "end_date" DATE   NOT NULL,
     "category_id" VARCHAR(4)   NOT NULL,
     "subcategory_id" VARCHAR(7)   NOT NULL,
+    "last_updated" TIMESTAMP   NOT NULL default localtimestamp, 
     CONSTRAINT "pk_campaigns" PRIMARY KEY (
         "cf_id"
      )
