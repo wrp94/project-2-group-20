@@ -13,7 +13,7 @@ CREATE TABLE "categories" (
 );
 
 CREATE TABLE "sub_categories" (
-    "subcategory_id" VARCHAR(7)   NOT NULL,
+    "subcategory_id" VARCHAR(10)   NOT NULL,
     "subcategory" VARCHAR(20)   NOT NULL,
     "last_updated" TIMESTAMP   NOT NULL default localtimestamp,
     CONSTRAINT "pk_sub_categories" PRIMARY KEY (
@@ -43,10 +43,10 @@ CREATE TABLE "campaigns" (
     "backers_count" INTEGER   NOT NULL,
     "country" VARCHAR(2)   NOT NULL,
     "currency" VARCHAR(3)   NOT NULL,
-    "launced_date" DATE   NOT NULL,
+    "launched_date" DATE   NOT NULL,
     "end_date" DATE   NOT NULL,
     "category_id" VARCHAR(4)   NOT NULL,
-    "subcategory_id" VARCHAR(7)   NOT NULL,
+    "subcategory_id" VARCHAR(10)   NOT NULL,
     "last_updated" TIMESTAMP   NOT NULL default localtimestamp, 
     CONSTRAINT "pk_campaigns" PRIMARY KEY (
         "cf_id"

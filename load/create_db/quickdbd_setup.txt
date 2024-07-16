@@ -6,7 +6,7 @@ last_updated TIMESTAMP
 
 sub_categories
 -
-subcategory_id PK VARCHAR(7)
+subcategory_id PK VARCHAR(10)
 subcategory VARCHAR(20)
 last_updated TIMESTAMP
 
@@ -30,8 +30,8 @@ outcome VARCHAR(10)
 backers_count INTEGER
 country VARCHAR(2)
 currency VARCHAR(3)
-launced_date DATE
+launched_date DATE
 end_date DATE
 category_id VARCHAR(4) FK >- categories.category_id
-subcategory_id VARCHAR(7) FK >- sub_categories.subcategory_id
+subcategory_id VARCHAR(10) FK >- sub_categories.subcategory_id
 last_updated TIMESTAMP
