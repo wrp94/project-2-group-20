@@ -1,4 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/wStqdy
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
@@ -61,4 +61,3 @@ REFERENCES "categories" ("category_id");
 
 ALTER TABLE "campaigns" ADD CONSTRAINT "fk_campaigns_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "sub_categories" ("subcategory_id");
-
