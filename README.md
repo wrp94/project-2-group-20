@@ -25,4 +25,4 @@ This step can also be completed using the PgAdmin GUI.
 
 ## [Query](query/queries.ipynb)
 
-In this step, a sample Exploratory Data Analysis (EDA) was completed to show examples of querying a database using `SQLAlchemy`. We found that the "Journalism" category of campaigns had the highest percentage of successful campaigns while also having the fewest number of campaigns in the dataset. "Theater" had the greatest number of campaigns while also having one of the least successful percentages.
+In this step, a sample Exploratory Data Analysis (EDA) was completed to show examples of querying a database using `SQLAlchemy`. We found that "Theater" had the highest number of campaigns with 344 whereas "Journalism" had the lowest number of campaigns with 4. Within Theater, "Plays" had the highest success with campaigns followed by "Rock" music. The subcategories with the lowest success rate were mobile games, audio, metal music, radio/podcasts, and world music.
