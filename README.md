@@ -8,18 +8,18 @@ This project attempts to model a basic Extract, Transform, Load (ETL) data pipel
 
 ## [Set-Up](load/create_db/)
 
-This project uses a local `PostgreSQL` server to store the database. Make sure the server and database exist and the [schema](load/create_db/schema.sql) has been set up using the query tool in PgAdmin. If a remote server is being used, or the default username and password do not apply to you, then you will need to adjust these values in each notebook.
+This project uses a local `PostgreSQL` server to store the database. Make sure the server and database exist and the [schema](load/create_db/crowdfunding_db.sql) has been set up using the query tool in PgAdmin. If a remote server is being used, or the default username and password do not apply to you, then you will need to adjust these values in each notebook.
 
 The database looks like this:
 ![Image showing an Entity Relationship Diagram for the Crowdfunding Database](load/create_db/ERD.png)
 
 ## [Extract/Transform](transform/ETL_Mini_Project.ipynb)
 
-The Excel workbooks were loaded into `Pandas DataFrames` to handle the normalization. `Pandas` makes it easy to manipulate datatypes, create new columns, and build new tables. With the two workbooks, four tables were created to store the data in a relational database. These four tables were exported as CSVs to make loading the data into the database easier and separate the loading from the extraction.
+The Excel workbooks were loaded into `Pandas DataFrames` to handle the normalization. `Pandas` makes it easy to manipulate data-types, create new columns, and build new tables. With the two workbooks, four tables were created to store the data in a relational database. These four tables were exported as CSVs to make loading the data into the database easier and separate the loading from the extraction.
 
 ## [Load](load/load_data/load_data.ipynb)
 
-We connected to the database using `SQLAlchemy` and then read in the CSVs using `Pandas`. Then, `Pandas` trivialized loading the data into the database using the `{data_frame}.to_sql()` function. The `to_sql()` function turns each `DataFrame` into rows that can be added to a table in the database (provided the datatypes and formatting match the existing database schema).
+We connected to the database using `SQLAlchemy` and then read in the CSVs using `Pandas`. Then, `Pandas` trivialized loading the data into the database using the `{data_frame}.to_sql()` function. The `to_sql()` function turns each `DataFrame` into rows that can be added to a table in the database (provided the data-types and formatting match the existing database schema).
 
 This step can also be completed using the PgAdmin GUI.
 
